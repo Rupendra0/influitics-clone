@@ -1,0 +1,167 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Ensure buttons and links are clickable */
+button, a, [role="button"] {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Prevent any backdrop elements from blocking interactions */
+*::before, *::after {
+  pointer-events: none;
+}
+
+/* Ensure interactive elements always work */
+button::before, button::after,
+a::before, a::after,
+[role="button"]::before, [role="button"]::after {
+  pointer-events: none;
+}
+
+/* Fix for any transform or animation issues */
+.btn-primary, .btn-secondary {
+  will-change: transform, background-color;
+}
+
+/* Debug styles - remove if buttons work properly */
+.btn-primary:hover, .btn-secondary:hover {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Ensure no parent container blocks interactions */
+.btn-primary:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-secondary:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Fix flex container button issues */
+.flex .btn-primary, .flex .btn-secondary {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 999;
+}
+
+/* Ensure button container doesn't interfere */
+div:has(.btn-primary), div:has(.btn-secondary) {
+  pointer-events: auto;
+}
+
+/* Additional hover state fixes */
+.btn-primary:hover, .btn-secondary:hover {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Custom component classes */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles using regular CSS to avoid @apply issues */
+.btn-primary {
+  background-color: rgb(2 132 199);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: auto !important;
+  border: none;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(3 105 161);
+  transform: translateY(-1px);
+  pointer-events: auto !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  pointer-events: auto !important;
+}
+
+.btn-secondary {
+  background-color: rgb(229 231 235);
+  color: rgb(31 41 55);
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: auto !important;
+  border: none;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(209 213 219);
+  transform: translateY(-1px);
+  pointer-events: auto !important;
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  pointer-events: auto !important;
+}
+
+/* Ensure all button links work properly */
+a.btn-primary, a.btn-secondary {
+  text-decoration: none !important;
+  pointer-events: auto !important;
+}
+
+a.btn-primary:visited, a.btn-secondary:visited {
+  color: inherit;
+  pointer-events: auto !important;
+}
+
+/* Prevent any overlays from blocking button interactions */
+.btn-primary *, .btn-secondary * {
+  pointer-events: none;
+}
+
+/* Fix for any backdrop or overlay issues */
+.btn-primary::before, .btn-secondary::before {
+  content: none;
+}
+
+.btn-primary::after, .btn-secondary::after {
+  content: none;
+}
