@@ -23,21 +23,22 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-br from-purple-600 to-blue-600">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Let&apos;s Work Together on Your Next Project
-          </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Ready to integrate Slack API into your application? Get in touch and let&apos;s build something amazing together.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <section id="contact" className="py-16 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
+          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-10 animate-slide-up order-2 lg:order-1">
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">👋</span>
+                <span className="text-lg font-semibold text-gray-700">HELLO</span>
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Work Together on your next Project</h3>
+              <p className="text-gray-600">
+                consectetur adipiscing elit. Donec non mattis nulla, in ultrices diam. Curabitur 
+                nec pharetra nunc. Nunc nec pellentesque nisl. Ut non mauris bibendum
+              </p>
+            </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -50,8 +51,8 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Enter your name"
+                  className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-gray-50"
+                  placeholder="Your Name"
                   required
                 />
               </div>
@@ -66,8 +67,8 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Enter your email"
+                  className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-gray-50"
+                  placeholder="Your Email"
                   required
                 />
               </div>
@@ -82,66 +83,41 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Describe your project requirements"
+                  className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-gray-50 resize-none"
+                  placeholder="Write Message..."
                   required
                 />
               </div>
               
-              <button type="submit" className="btn-primary w-full">
+              <button type="submit" className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold py-4 px-8 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg">
                 Send Message
               </button>
             </form>
           </div>
 
-          {/* Contact Info */}
-          <div className="text-white">
-            <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">📧</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-purple-100">slack.api@developer.com</p>
-                </div>
-              </div>
+          {/* Image Side */}
+          <div className="relative order-1 lg:order-2">
+            <div className="relative max-w-lg mx-auto">
+              <img 
+                src="/Let's Work Together.png" 
+                alt="Let's Work Together" 
+                className="w-full h-auto max-h-[600px] object-contain rounded-2xl"
+              />
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💬</span>
+              {/* Trusted Partners */}
+              <div className="absolute bottom-0 right-0 bg-white rounded-2xl shadow-lg p-6 transform translate-y-8">
+                <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">Trusted Partners</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <img src="/image copy.png" alt="Payoneer" className="h-8 object-contain" />
+                  <img src="/image copy.png" alt="Affirm" className="h-8 object-contain" />
+                  <img src="/image copy.png" alt="Verifone" className="h-8 object-contain" />
+                  <img src="/image copy.png" alt="SEPA" className="h-8 object-contain" />
                 </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Slack</h4>
-                  <p className="text-purple-100">@slackapi-dev</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🌐</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Website</h4>
-                  <p className="text-purple-100">www.slackapi-integration.dev</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <h4 className="text-xl font-bold mb-6">Trusted Partners</h4>
-              <div className="grid grid-cols-3 gap-4">
-                {['Slack', 'GitHub', 'AWS', 'Vercel', 'Docker', 'MongoDB'].map((partner, index) => (
-                  <div key={index} className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
-                    <div className="font-medium text-sm">{partner}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

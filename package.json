@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.2.5",
     "@slack/bolt": "^3.17.1",
     "@slack/web-api": "^7.3.4",
     "next": "^14.2.5",
