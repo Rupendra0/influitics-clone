@@ -33,7 +33,7 @@ export default function Contact() {
                 <span className="text-2xl">👋</span>
                 <span className="text-lg font-semibold text-gray-700">HELLO</span>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Work Together on your next Project</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Let&apos;s Work Together on your next Project</h3>
               <p className="text-gray-600">
                 consectetur adipiscing elit. Donec non mattis nulla, in ultrices diam. Curabitur 
                 nec pharetra nunc. Nunc nec pellentesque nisl. Ut non mauris bibendum
@@ -99,21 +99,11 @@ export default function Contact() {
           <div className="relative order-1 lg:order-2">
             <div className="relative max-w-lg mx-auto">
               <img 
-                src="/Let's Work Together.png" 
+                src="/y.png" 
                 alt="Let's Work Together" 
                 className="w-full h-auto max-h-[600px] object-contain rounded-2xl"
               />
-              
-              {/* Trusted Partners */}
-              <div className="absolute bottom-0 right-0 bg-white rounded-2xl shadow-lg p-6 transform translate-y-8">
-                <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">Trusted Partners</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <img src="/image copy.png" alt="Payoneer" className="h-8 object-contain" />
-                  <img src="/image copy.png" alt="Affirm" className="h-8 object-contain" />
-                  <img src="/image copy.png" alt="Verifone" className="h-8 object-contain" />
-                  <img src="/image copy.png" alt="SEPA" className="h-8 object-contain" />
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

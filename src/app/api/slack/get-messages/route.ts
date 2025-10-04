@@ -3,6 +3,9 @@ import { WebClient } from '@slack/web-api'
 
 const slack = new WebClient(process.env.SLACK_BOT_TOKEN)
 
+// Force this route to be dynamic since it needs to access request parameters
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
