@@ -5,8 +5,8 @@ import { Providers } from '@/components/providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Slack API Integration',
-  description: 'A modern Slack API integration with messaging capabilities',
+  title: 'Influitics',
+  description: 'A modern influercer management webpage',
 }
 
 export default function RootLayout({
